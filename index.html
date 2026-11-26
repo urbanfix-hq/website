@@ -3,9 +3,26 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>UrbanFix – See every street issue. Fix it faster.</title>
-<meta name="description" content="UrbanFix turns citizens' photos into tracked jobs for local authorities and their service providers, from the first report to the fix.">
-<link rel="icon" type="image/png" href="assets/favicon.png">
+<title>UrbanFix – Citizen issue reporting and public space maintenance platform</title>
+<meta name="description" content="UrbanFix helps municipalities and their service providers turn citizens&#x27; photo reports into tracked, routed and fixed jobs. Mobile app and web back office, in Arabic, French and English.">
+<link rel="canonical" href="https://urbanfix.city/">
+<link rel="alternate" hreflang="en" href="https://urbanfix.city/">
+<link rel="alternate" hreflang="fr" href="https://urbanfix.city/fr/">
+<link rel="alternate" hreflang="ar" href="https://urbanfix.city/ar/">
+<link rel="alternate" hreflang="x-default" href="https://urbanfix.city/">
+<meta name="theme-color" content="#1167B0">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="UrbanFix">
+<meta property="og:title" content="UrbanFix – Citizen issue reporting and public space maintenance platform">
+<meta property="og:description" content="UrbanFix helps municipalities and their service providers turn citizens&#x27; photo reports into tracked, routed and fixed jobs. Mobile app and web back office, in Arabic, French and English.">
+<meta property="og:url" content="https://urbanfix.city/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://urbanfix.city/assets/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://urbanfix.city/#org", "name": "UrbanFix", "url": "https://urbanfix.city/", "logo": "https://urbanfix.city/assets/logo-full.png", "contactPoint": {"@type": "ContactPoint", "telephone": "+216-55-588-291", "contactType": "sales", "availableLanguage": ["Arabic", "French", "English"]}}, {"@type": "WebSite", "@id": "https://urbanfix.city/#site", "url": "https://urbanfix.city/", "name": "UrbanFix", "publisher": {"@id": "https://urbanfix.city/#org"}, "inLanguage": ["en", "fr", "ar"]}, {"@type": "SoftwareApplication", "name": "UrbanFix", "applicationCategory": "BusinessApplication", "operatingSystem": "Web, Android, iOS", "description": "UrbanFix helps municipalities and their service providers turn citizens' photo reports into tracked, routed and fixed jobs. Mobile app and web back office, in Arabic, French and English.", "inLanguage": "en", "url": "https://urbanfix.city/", "publisher": {"@id": "https://urbanfix.city/#org"}}]}</script>
+<link rel="icon" type="image/png" href="/assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -40,9 +57,9 @@ header{position:sticky;top:0;height:0;z-index:30}
 .links{display:flex;gap:26px;margin-inline-start:auto;font-weight:500;font-size:15px}
 .links a{text-decoration:none;color:var(--mute)}.links a:hover{color:var(--blue)}
 .langs{display:flex;gap:4px}
-.langs button{border:0;background:none;font:600 14px Inter,sans-serif;color:var(--mute);min-width:40px;height:40px;border-radius:10px;cursor:pointer}
-.langs button[lang=ar]{font-family:"IBM Plex Sans Arabic",sans-serif}
-.langs button[aria-pressed=true]{color:var(--blue);background:#eaf2fb}
+.langs a{display:inline-grid;place-items:center;text-decoration:none;border:0;background:none;font:600 14px Inter,sans-serif;color:var(--mute);min-width:40px;height:40px;border-radius:10px;cursor:pointer}
+.langs a[lang=ar]{font-family:"IBM Plex Sans Arabic",sans-serif}
+.langs a[aria-current=page]{color:var(--blue);background:#eaf2fb}
 .nav .btn{min-height:46px;padding:0 18px;font-size:15px;border-radius:12px}
 @media(max-width:960px){.links{display:none}.langs{margin-inline-start:auto}}
 @media(max-width:560px){.nav .btn{display:none}.nav img{height:34px}.nav{height:62px}}
@@ -212,12 +229,12 @@ footer img{height:36px;width:auto}
 <body>
 <header>
  <nav class="nav" aria-label="Main">
-  <a href="#top" aria-label="UrbanFix"><img src="assets/logo-horizontal.png" alt="UrbanFix" width="115" height="42"></a>
+  <a href="#top" aria-label="UrbanFix"><img src="/assets/logo-horizontal.png" alt="UrbanFix" width="115" height="42"></a>
   <div class="links"><a href="#audiences" data-i="nav.who">Who it's for</a><a href="#how" data-i="nav.how">How it works</a><a href="#platform" data-i="nav.platform">Platform</a></div>
   <div class="langs" role="group" aria-label="Language">
-   <button type="button" lang="en" data-lang="en" aria-pressed="true">EN</button>
-   <button type="button" lang="fr" data-lang="fr" aria-pressed="false">FR</button>
-   <button type="button" lang="ar" data-lang="ar" aria-pressed="false">عربي</button>
+   <a href="/" lang="en" hreflang="en" data-lang="en" aria-current="page">EN</a>
+   <a href="/fr/" lang="fr" hreflang="fr" data-lang="fr">FR</a>
+   <a href="/ar/" lang="ar" hreflang="ar" data-lang="ar">عربي</a>
   </div>
   <a class="btn or" href="#demo" data-i="cta.demo">Request a demo</a>
  </nav>
@@ -335,7 +352,7 @@ footer img{height:36px;width:auto}
 </section>
 </main>
 
-<footer><div class="w"><img src="assets/logo-horizontal.png" alt="UrbanFix" width="99" height="36"><span data-i="ft.tag">The digital platform for maintaining urban public spaces.</span><a class="tel" href="tel:+21655588291" dir="ltr">+216 55 588 291</a><span>© 2026 UrbanFix · <span data-i="ft.rights">All rights reserved.</span></span></div></footer>
+<footer><div class="w"><img src="/assets/logo-horizontal.png" alt="UrbanFix" width="99" height="36"><span data-i="ft.tag">The digital platform for maintaining urban public spaces.</span><a class="tel" href="tel:+21655588291" dir="ltr">+216 55 588 291</a><span>© 2026 UrbanFix · <span data-i="ft.rights">All rights reserved.</span></span></div></footer>
 
 <script>
 {
@@ -450,22 +467,25 @@ ISS.forEach((s,n)=>{const k=n+1;
  </g>`;});
 map.innerHTML=o;
 
-/* ---- language ---- */
-let lang='en';
+/* ---- language: each language has its own page (/, /fr/, /ar/) ---- */
+const PAGE=document.documentElement.lang, URLS={en:'/',fr:'/fr/',ar:'/ar/'};
+let lang=PAGE;
 function setLang(l){
  if(!T[l]) l='en'; lang=l; const d=T[l];
- document.documentElement.lang=l; document.documentElement.dir=l==='ar'?'rtl':'ltr'; document.title=d.title;
  document.querySelectorAll('[data-i]').forEach(e=>{const v=d[e.dataset.i]; if(v!==undefined) e.textContent=v;});
  document.querySelectorAll('[data-ph]').forEach(e=>{e.placeholder=d[e.dataset.ph]||'';});
  map.querySelectorAll('foreignObject div.toast').forEach(t=>t.setAttribute('dir',l==='ar'?'rtl':'ltr'));
- document.querySelectorAll('.langs button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.lang===l));
- try{localStorage.setItem('ufx-lang',l)}catch(e){}
 }
-document.querySelectorAll('.langs button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+document.querySelectorAll('.langs a').forEach(a=>a.addEventListener('click',()=>{try{localStorage.setItem('ufx-lang',a.dataset.lang)}catch(e){}}));
 const FR_ZONES=['Europe/Paris','Europe/Brussels','Africa/Casablanca','Africa/El_Aaiun','Africa/Algiers','Africa/Tunis','America/Guadeloupe','America/Martinique','America/Cayenne','America/St_Barthelemy','America/Marigot','America/Miquelon','Indian/Reunion','Indian/Mayotte','Pacific/Noumea','Pacific/Tahiti','Pacific/Marquesas','Pacific/Gambier','Pacific/Wallis'];
 function langFromPlace(){try{return FR_ZONES.includes(Intl.DateTimeFormat().resolvedOptions().timeZone)?'fr':'en'}catch(e){return 'en'}}
-let start=''; try{start=localStorage.getItem('ufx-lang')||''}catch(e){}
-setLang(T[start]?start:langFromPlace());
+/* On the home page only: send the visitor to their saved language, or French for francophone time zones. Direct /fr/ and /ar/ links are never redirected. */
+if(PAGE==='en' && location.pathname==='/' && !/bot|crawl|spider|slurp|preview/i.test(navigator.userAgent)){
+ let saved=''; try{saved=localStorage.getItem('ufx-lang')||''}catch(e){}
+ const want=T[saved]?saved:langFromPlace();
+ if(want!=='en') location.replace(URLS[want]+location.hash);
+}
+setLang(PAGE);
 
 /* ---- play tile animations when visible ---- */
 const targets=document.querySelectorAll('.anim,#journey');

@@ -199,6 +199,10 @@ input:focus,select:focus,textarea:focus{border-color:var(--blue);outline:none;bo
 .msg.ok{display:block;background:#e7f4ec;color:#1b5e20}.msg.err{display:block;background:#fbe9e9;color:#a51d1d}.msg.info{display:block;background:#eaf2fb;color:#0d5596}
 @media(max-width:900px){.cta .w{grid-template-columns:1fr}.cta .side{position:static}}
 @media(max-width:560px){form{grid-template-columns:1fr}}
+.call{display:inline-flex;align-items:center;gap:12px;margin-top:30px;color:#fff;text-decoration:none;background:rgba(255,255,255,.14);border-radius:16px;padding:12px 18px}
+.call:hover{background:rgba(255,255,255,.22)}.call svg{width:26px;height:26px;flex:none}
+.call small{display:block;font-size:14px;color:#fff3e8}.call b{font-size:20px;font-weight:600;unicode-bidi:isolate;direction:ltr}
+footer a.tel{color:var(--ink);font-weight:600;text-decoration:none;unicode-bidi:isolate;direction:ltr}footer a.tel:hover{color:var(--blue)}
 footer{padding:40px 0;font-size:14px;color:var(--mute);border-top:1px solid var(--line)}
 footer .w{display:flex;flex-wrap:wrap;gap:16px 32px;justify-content:space-between;align-items:center}
 footer img{height:36px;width:auto}
@@ -306,6 +310,7 @@ footer img{height:36px;width:auto}
    <h2 data-i="demo.title">See UrbanFix on your city</h2>
    <p class="lead" data-i="demo.lead">Book a demo in your language, online or in person. We'll tailor it to your area and your services.</p>
    <div class="badges"><span data-i="bd.1">Hosted in your region</span><span data-i="bd.2">Two-factor sign-in</span><span data-i="bd.3">Tamper-evident logs</span><span data-i="bd.4">Your city's name on the app</span></div>
+   <a class="call" href="tel:+21655588291"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span><small data-i="call.t">Prefer to talk? Call us</small><b dir="ltr">+216 55 588 291</b></span></a>
   </div>
   <form id="demoForm" novalidate>
    <div class="f"><label for="f-name"><span data-i="f.name">Full name</span> <span class="req">*</span></label><input id="f-name" name="name" autocomplete="name" required maxlength="80"></div>
@@ -330,7 +335,7 @@ footer img{height:36px;width:auto}
 </section>
 </main>
 
-<footer><div class="w"><img src="assets/logo-horizontal.png" alt="UrbanFix" width="99" height="36"><span data-i="ft.tag">The digital platform for maintaining urban public spaces.</span><span>© 2026 UrbanFix · <span data-i="ft.rights">All rights reserved.</span></span></div></footer>
+<footer><div class="w"><img src="assets/logo-horizontal.png" alt="UrbanFix" width="99" height="36"><span data-i="ft.tag">The digital platform for maintaining urban public spaces.</span><a class="tel" href="tel:+21655588291" dir="ltr">+216 55 588 291</a><span>© 2026 UrbanFix · <span data-i="ft.rights">All rights reserved.</span></span></div></footer>
 
 <script>
 {
@@ -357,7 +362,7 @@ en:{"nav.who":"Who it's for","nav.how":"How it works","nav.platform":"Platform",
 "lg.t":"Arabic, French, English","lg.p":"Right-to-left included, in the app, the back office and emails.",
 "how.title":"From a photo to a fixed street","h1.t":"Report","h1.p":"A photo and the phone's GPS. The address is found automatically.","h2.t":"Route","h2.p":"The right authority and provider, from the place and the type of problem.","h3.t":"Fix","h3.p":"Providers plan the work; field teams post progress and proof on site.","h4.t":"Close the loop","h4.p":"The authority closes the report and the citizen sees it fixed.",
 "demo.title":"See UrbanFix on your city","demo.lead":"Book a demo in your language, online or in person. We'll tailor it to your area and your services.",
-"bd.1":"Hosted in your region","bd.2":"Two-factor sign-in","bd.3":"Tamper-evident logs","bd.4":"Your city's name on the app",
+"bd.1":"Hosted in your region","bd.2":"Two-factor sign-in","bd.3":"Tamper-evident logs","call.t":"Prefer to talk? Call us","bd.4":"Your city's name on the app",
 "f.name":"Full name","f.email":"Work email","f.org":"Organisation","f.phone":"Phone","f.type":"Type of organisation","f.choose":"Choose…","f.t1":"Municipality or local authority","f.t2":"Ministry or public agency","f.t3":"Utility or service provider","f.t4":"Other","f.country":"Country","f.date":"Preferred date","f.time":"Preferred time","f.am":"Morning","f.pm":"Afternoon","f.any":"Any time","f.format":"Format","f.online":"Online","f.onsite":"In person","f.msg":"Message (optional)","f.msgph":"City size, priorities, questions…","f.consent":"I agree that UrbanFix may use this information to contact me about this demo.","f.req":"required","f.submit":"Request my demo",
 "m.sending":"Sending…","m.missing":"Please fill in the required fields.","m.email":"Please enter a valid email address.","m.ok":"Thank you! Your request has been sent. We'll contact you to confirm the date.","m.err":"Your request could not be sent. Please try again, or write to us at "+TO+".","m.preview":"Preview only: nothing was sent. On urbanfix.city this form is emailed to "+TO+".",
 "ft.tag":"The digital platform for maintaining urban public spaces.","ft.rights":"All rights reserved.","title":"UrbanFix – See every street issue. Fix it faster."},
@@ -382,7 +387,7 @@ fr:{"nav.who":"Pour qui","nav.how":"Comment ça marche","nav.platform":"Platefor
 "lg.t":"Arabe, français, anglais","lg.p":"Écriture de droite à gauche comprise, dans l'application, le back-office et les e-mails.",
 "how.title":"D'une photo à une rue réparée","h1.t":"Signaler","h1.p":"Une photo et la position GPS du téléphone. L'adresse est trouvée automatiquement.","h2.t":"Orienter","h2.p":"La bonne collectivité et le bon prestataire, selon le lieu et le type de problème.","h3.t":"Réparer","h3.p":"Le prestataire planifie l'intervention ; l'équipe terrain publie l'avancement et les preuves sur place.","h4.t":"Boucler la boucle","h4.p":"La collectivité clôture le signalement et le citoyen le voit réparé.",
 "demo.title":"Découvrez UrbanFix appliqué à votre ville","demo.lead":"Réservez une démo dans votre langue, en ligne ou sur place. Nous l'adaptons à votre territoire et à vos services.",
-"bd.1":"Hébergé dans votre région","bd.2":"Connexion à deux facteurs","bd.3":"Journaux infalsifiables","bd.4":"Le nom de votre ville sur l'application",
+"bd.1":"Hébergé dans votre région","bd.2":"Connexion à deux facteurs","bd.3":"Journaux infalsifiables","call.t":"Vous préférez en parler ? Appelez-nous","bd.4":"Le nom de votre ville sur l'application",
 "f.name":"Nom complet","f.email":"E-mail professionnel","f.org":"Organisation","f.phone":"Téléphone","f.type":"Type d'organisation","f.choose":"Choisir…","f.t1":"Commune ou collectivité locale","f.t2":"Ministère ou organisme public","f.t3":"Opérateur ou prestataire de services","f.t4":"Autre","f.country":"Pays","f.date":"Date souhaitée","f.time":"Moment préféré","f.am":"Matin","f.pm":"Après-midi","f.any":"Indifférent","f.format":"Format","f.online":"En ligne","f.onsite":"Sur place","f.msg":"Message (facultatif)","f.msgph":"Taille de la ville, priorités, questions…","f.consent":"J'accepte qu'UrbanFix utilise ces informations pour me contacter au sujet de cette démo.","f.req":"champ obligatoire","f.submit":"Envoyer ma demande",
 "m.sending":"Envoi…","m.missing":"Merci de remplir les champs obligatoires.","m.email":"Merci de saisir une adresse e-mail valide.","m.ok":"Merci ! Votre demande a été envoyée. Nous vous contacterons pour confirmer la date.","m.err":"L'envoi n'a pas abouti. Réessayez ou écrivez-nous à "+TO+".","m.preview":"Aperçu uniquement : rien n'a été envoyé. Sur urbanfix.city, ce formulaire est envoyé à "+TO+".",
 "ft.tag":"La plateforme numérique de maintenance des espaces publics urbains.","ft.rights":"Tous droits réservés.","title":"UrbanFix – Chaque problème de rue, visible. Réparé plus vite."},
@@ -407,7 +412,7 @@ ar:{"nav.who":"لمن","nav.how":"كيف يعمل","nav.platform":"المنصة"
 "lg.t":"العربية والفرنسية والإنجليزية","lg.p":"مع دعم الكتابة من اليمين إلى اليسار في التطبيق وواجهة الإدارة والرسائل.",
 "how.title":"من صورة إلى شارع مُصلَح","h1.t":"أبلِغ","h1.p":"صورة وموقع الهاتف عبر GPS، والعنوان يُحدَّد تلقائيًا.","h2.t":"وجِّه","h2.p":"الجهة المسؤولة ومقدّم الخدمة المناسب، حسب المكان ونوع المشكلة.","h3.t":"أصلِح","h3.p":"يخطّط مقدّم الخدمة للتدخّل، وينشر فريق الميدان التقدّم والإثباتات من الموقع.","h4.t":"أغلِق الحلقة","h4.p":"تُغلق البلدية البلاغ ويرى المواطن أنه أُصلِح.",
 "demo.title":"شاهد UrbanFix في مدينتك","demo.lead":"احجز عرضًا بلغتك، عن بُعد أو حضوريًا، وسنكيّفه مع منطقتك وخدماتك.",
-"bd.1":"استضافة في منطقتك","bd.2":"تحقّق بخطوتين","bd.3":"سجلّات محمية من التلاعب","bd.4":"اسم مدينتك على التطبيق",
+"bd.1":"استضافة في منطقتك","bd.2":"تحقّق بخطوتين","bd.3":"سجلّات محمية من التلاعب","call.t":"تفضّل الحديث؟ اتصل بنا","bd.4":"اسم مدينتك على التطبيق",
 "f.name":"الاسم الكامل","f.email":"البريد الإلكتروني المهني","f.org":"المؤسسة","f.phone":"الهاتف","f.type":"نوع المؤسسة","f.choose":"اختر…","f.t1":"بلدية أو سلطة محلية","f.t2":"وزارة أو هيكل عمومي","f.t3":"مشغّل أو مقدّم خدمات","f.t4":"أخرى","f.country":"البلد","f.date":"التاريخ المفضّل","f.time":"الوقت المفضّل","f.am":"صباحًا","f.pm":"بعد الظهر","f.any":"لا يهم","f.format":"طريقة العرض","f.online":"عن بُعد","f.onsite":"حضوريًا","f.msg":"رسالة (اختياري)","f.msgph":"حجم المدينة، الأولويات، أسئلتك…","f.consent":"أوافق على أن تستخدم UrbanFix هذه المعلومات للتواصل معي بخصوص هذا العرض.","f.req":"حقل إلزامي","f.submit":"أرسل طلبي",
 "m.sending":"جارٍ الإرسال…","m.missing":"يُرجى ملء الحقول الإلزامية.","m.email":"يُرجى إدخال بريد إلكتروني صحيح.","m.ok":"شكرًا! تم إرسال طلبك، وسنتواصل معك لتأكيد الموعد.","m.err":"تعذّر الإرسال. حاول مجددًا أو راسلنا على "+TO+".","m.preview":"معاينة فقط: لم يُرسَل أي شيء. على urbanfix.city يُرسَل هذا النموذج إلى "+TO+".",
 "ft.tag":"المنصة الرقمية لصيانة الفضاءات العامة الحضرية.","ft.rights":"جميع الحقوق محفوظة.","title":"UrbanFix – كل مشكلة في الشارع، مرئية، وتُصلَح أسرع."}
